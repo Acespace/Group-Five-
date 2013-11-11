@@ -1,0 +1,30 @@
+
+
+
+def bsearch(list,search):
+
+
+
+
+  high = len(list)
+
+  low = 0
+
+  while ( low <= high):
+
+    mid = (high + low) / 2
+
+    if (search < list[mid]):
+      high = mid - 1
+
+
+    elif ( search > list[mid]):
+      low = mid + 1
+
+
+    else:
+      return mid
+
+
+
+
