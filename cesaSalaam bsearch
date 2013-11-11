@@ -1,0 +1,18 @@
+myList = [2,3,4,5,6,7,8,9,10,12,13]
+def bSearch (List, element):
+    bottom = 0
+    top = len(List)
+    middle = 0
+    if element < List[len(List)- 1] and element > List[0]:
+        while top >= bottom :
+            middle = (bottom+top)//2
+            if List[middle] == element:
+                return middle
+            elif List[middle] < element:
+                bottom = middle + 1
+                
+            else:
+                top = middle - 1
+    else:
+        return -1
+print bSearch(myList,9)
