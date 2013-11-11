@@ -1,0 +1,25 @@
+myList = [2,3,4,5,6,6,7,8]
+searchelement = 3
+
+def bsearch(list, element):
+    if len(list) != 0:
+        first = 0 
+        last = len(list)-1
+        midpoint = (first + last)/2 
+        found = False;
+        while not found:
+            if (first==last) and (element != list[first]):
+                print 'Element is not in list.'
+                return -1 
+            elif element < list[midpoint]:
+                last = midpoint - 1
+                midpoint = (first+last)/2
+            elif element > list[midpoint]:
+                first = midpoint + 1
+                midpoint = (first+last)/2
+            else:
+                found = True
+                return midpoint 
+    else:
+        print 'Element cannot be found. List is empty.'
+        return -1
