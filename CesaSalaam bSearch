@@ -1,4 +1,3 @@
-
 def bSearch (List, element):
     bottom = 0
     top = len(List)
@@ -21,3 +20,4 @@ def bSearch (List, element):
         
 # This is my test list: myList = [9,10,12,14]       
 # This is how you would call the function: print bSearch(myList,20)
+ 
